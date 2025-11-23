@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>BasoBasoBaso</title>
+<style>
+    body {
+        background: #414141;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        background: rgb(37, 37, 37);
+        padding: 30px;
+        border-radius: 20px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    input {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    button {
+        width: 95%;
+        padding: 12px;
+        border: none;
+        background: #4CAF50;
+        color: white;
+        border-radius: 12px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #45a049;
+    }
+
+    #helpBtn {
+        width: 95%;
+        padding: 12px;
+        background: #45a049;
+        border: none;
+        color: white;
+        border-radius: 12px;
+        cursor: pointer;
+        margin-top: 10px;
+        display: none;
+    }
+
+    #helpBtn:hover {
+        background: #e68900;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="color: white; text-shadow: white 0 0 10px;">Giriş Yap</h2>
+
+    <input type="text" id="username" placeholder="Kullanıcı Adı" style="color: black;">
+    <input type="password" id="password" placeholder="Şifre">
+
+    <button onclick="login()">Giriş Yap</button>
+
+    <button id="helpBtn" onclick="showPasswordHelp()">Şifre Yardımı</button>
+</div>
+
+<script>
+
+    const correctiUsername = "Baso";  // ✔ Buraya istediğin kullanıcı adını yaz
+    const correctPassword = "030421";  // ✔ Buraya istediğin şifreyi yaz
+
+    function login() {
+        let pass = document.getElementById("password").value;
+        let user = document.getElementById("username").value;
+
+        if (pass === correctPassword && user === correctiUsername) {
+            // ✔ Mevcut sekmede açılır
+            window.location.href = "video.html"; 
+        } else {
+            alert("Şifre yada kullanıcı adı yanlış!");
+            document.getElementById("helpBtn").style.display = "block";
+        }
+    }
+
+    function showPasswordHelp() {
+        alert("Baso ...... tarihinde katıldı. İnternette gördüğünüz her şeye inanmayın.");
+    }
+
+</script>
+
+</body>
+</html>
