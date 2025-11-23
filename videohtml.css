@@ -10,8 +10,10 @@ body {
   -webkit-backdrop-filter: blur(8px);
 }
 
+/* Video Kutusu */
 .video-box {
-  width: 600px;
+  width: 400px;
+  height: 250px;
   max-width: 90%;
   border-radius: 15px;
   overflow: hidden;
@@ -21,8 +23,9 @@ body {
   -webkit-backdrop-filter: blur(6px);
 }
 
+/* Video Responsive Ayar */
 video {
-  width: 1440px;
-  height: 310px;
+  width: 100% !important;  /* Kutunun içini tamamen kapla */
+  height: auto !important; /* Yükseklik orantılı değişsin */
   display: block;
 }
